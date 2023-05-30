@@ -1,11 +1,13 @@
 import numpy as np
-from PSO import PSO
 import pandas as pd
+
+from PSO import PSO
+
 
 class Logistic_regression:
     def __init__(self, dataMat1, dataMat2):
-        self.dataMat1 = np.array(dataMat1) #训练数据
-        self.dataMat2 = np.array(dataMat2) #实验数据
+        self.dataMat1 = np.array(dataMat1)  # 训练数据
+        self.dataMat2 = np.array(dataMat2)  # 验证数据
         self.m1, self.n1 = self.dataMat1.shape  # 获取行数m1和列数n1
         self.beta = np.random.rand(self.n1) # 列为特征，最后一列为标签
     
